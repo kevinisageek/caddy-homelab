@@ -1,4 +1,4 @@
-FROM index.docker.io/library/caddy:builder AS builder
+FROM index.docker.io/library/caddy:2-builder AS builder
 
 RUN xcaddy build --with github.com/caddy-dns/gandi
 
