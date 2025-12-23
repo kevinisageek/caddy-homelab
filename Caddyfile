@@ -1,10 +1,15 @@
 {
-    acme_dns gandi {env.GANDI_BEARER_TOKEN}
+	acme_dns gandi {env.GANDI_BEARER_TOKEN}
 }
 
 code.kevinisageek.org {
-    handle * {
-        reverse_proxy codeforge:3000
-    }
+	handle * {
+		reverse_proxy codeforge:3000
+	}
+}
 
+pocket-id.kevinisageek.org {
+	handle * {
+		reverse_proxy pocket-id:1411
+	}
 }
