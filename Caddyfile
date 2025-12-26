@@ -13,3 +13,9 @@ pocket-id.kevinisageek.org {
 		reverse_proxy pocket-id:1411
 	}
 }
+
+coreos.kevinisageek.org {
+	handle * {
+		respond "Hello, world!"
+	}
+}
