@@ -35,10 +35,10 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          labels: | 
-            ${{ steps.meta.outputs.labels }}
-            org.opencontainers.image.description=Custom Caddy container with Gandi support for SSL certs
-            org.opencontainers.image.licenses=WTFPL
+          #labels: | 
+          #  ${{ steps.meta.outputs.labels }}
+          #  org.opencontainers.image.description=Custom Caddy container with Gandi support for SSL certs
+          #  org.opencontainers.image.licenses=WTFPL
       - name: Build and push Docker image
         id: push
         uses: docker/build-push-action@v6
